@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[小名同学的博客]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2016-02-06T19:26:06.705Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[小名同学]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[HTTP权威指南笔记（第一部分）：HTTP协议概述]]></title>
+    <link href="http://yoursite.com/2016/02/06/http-1/"/>
+    <id>http://yoursite.com/2016/02/06/http-1/</id>
+    <published>2016-02-06T15:43:34.000Z</published>
+    <updated>2016-02-06T19:26:06.705Z</updated>
+    <content type="html"><![CDATA[<h3 id="HTTP_u2014_u2014_u56E0_u7279_u7F51_u7684_u8D44_u6E90_u4FE1_u4F7F"><a href="#HTTP_u2014_u2014_u56E0_u7279_u7F51_u7684_u8D44_u6E90_u4FE1_u4F7F" class="headerlink" title="HTTP——因特网的资源信使"></a>HTTP——因特网的资源信使</h3><ol>
+<li>每天有数不清的资源在因特网上游弋，HTTP可以从遍布全世界的Web服务器上讲这些信息块迅捷、可靠的搬到人们的Web浏览器上去。</li>
+<li>HTTP实用的是可靠的数据传输协议，因此再远的距离它也能确保数据在传输过程中不被损坏或产生混乱。开发人员也可以专注于应用程序的细节编写，而不用考虑英特网中存在的一些问题。</li>
+</ol>
+<h3 id="Web_u5BA2_u6237_u7AEF_u548C_u670D_u52A1_u5668"><a href="#Web_u5BA2_u6237_u7AEF_u548C_u670D_u52A1_u5668" class="headerlink" title="Web客户端和服务器"></a>Web客户端和服务器</h3><ol>
+<li>Web内容都存储在Web服务器上，Web服务器所使用的是HTTP协议，因此Web服务器也被成为HTTP服务器。</li>
+<li>最常见的客户端就是Web浏览器，客户端向服务器发出HTTP请求，服务器去寻找所期望的对象，如果成功就将对象、对象类型、对象长度、以及其它的一些相关信息放在HTTP响应中发送给客户端。</li>
+</ol>
+<h3 id="u8D44_u6E90"><a href="#u8D44_u6E90" class="headerlink" title="资源"></a>资源</h3><ol>
+<li>Web服务器是Web资源的宿主，Web资源是Web内容的源头。最简单的Web资源就是Web服务器文件系统中的静态文件。这些文件可以包含任意内容：文本文件、HTML文件、Word文件、Acrobat文件、JPEG图片文件、AVI电影文件，或者是其它你能够想到的格式。</li>
+<li>资源不一定非得是静态文件，它还可以是根究需要生成内容的软件程序。这些动态资源可以根据你的身份、你所请求的信息或是每天的不同时段来产生内容。总之所有类型的内容都是资源。</li>
+</ol>
+<h4 id="u5A92_u4F53_u7C7B_u578B"><a href="#u5A92_u4F53_u7C7B_u578B" class="headerlink" title="媒体类型"></a>媒体类型</h4><ol>
+<li>因特网上有数千种不同的数据类型，HTTP给每种要通过Web传输的对象都打上MIME类型的数据格式标签。</li>
+<li>Web服务器会为所有的HTTP对象数据附加一个MIME类型。当Web浏览器从服务器中取回一个对象时，会去查看相关的MIME类型，看看它是否知道应该如何处理这个对象。</li>
+<li>MIME是一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间由一条斜杠来分隔。如：<blockquote>
+<p>HTML格式的文本文档由text/html类型来标记</p>
+<p>普通的ASCLL文本文档由text/plain类型来标记</p>
+<p>JPEG格式的图片为image/jpeg类型</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h4><ol>
+<li>每个服务器资源都有一个名字，这个名字就是URI（统一资源标识符）。URI就像因特网上的邮政地址一样，在世界范围内唯一标识并定位信息资源。</li>
+<li>给定了URI，HTTP就可以解析出对象。URI有两种形式，分别称为URL和URN。</li>
+</ol>
+<h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><ol>
+<li>统一资源定位符（URL）是资源标识符最常见的形式。它描述了某资源在一台特定服务器上的特定位置。</li>
+<li>大部分URL都遵循一种标准格式，这种格式包含三个部分。<blockquote>
+<p>URL的第一部分被称为方案，说明了访问资源所使用的协议类型，通常就是HTTP协议（http：//）。<br>第二部分给出服务器的因特网地址（www.example.com）。<br>第三部分制定Web服务器上的某个资源（/images/example.gif）。</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="URN"><a href="#URN" class="headerlink" title="URN"></a>URN</h4><ol>
+<li>URI的另外一种形式就是统一资源名（URN）。URN是作为特定内容的唯一名称使用的，与目前的资源所在地无关。</li>
+<li>使用URN不仅可以将资源四处搬移，还可以用同一个名字通过多种网络访问协议来访问资源。</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="HTTP_u2014_u2014_u56E0_u7279_u7F51_u7684_u8D44_u6E90_u4FE1_u4F7F"><a href="#HTTP_u2014_u2014_u56E0_u7279_u7F51_u7684_u8D44_u6E90_u4F]]>
+    </summary>
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="网络基础" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+</feed>
